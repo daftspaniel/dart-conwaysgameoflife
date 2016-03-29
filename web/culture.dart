@@ -2,13 +2,11 @@ import 'dart:math';
 
 // The World in which the cells live.
 class culture {
-
   var cellDish = {};
   int width = 80;
   var rng = new Random();
 
   culture() {
-
     //growth
     for (int x = 0; x < width; x++) {
       for (int y = 0; y < width; y++) {
@@ -33,12 +31,10 @@ class culture {
     cellDish.forEach((k, c) => c.update());
     cellDish.forEach((k, c) => c.commit());
   }
-
 }
 
 // The Cellular Level Object.
 class cell {
-
   cell(this.x, this.y, this.Environment);
   int x, y;
   Map Environment;
@@ -57,7 +53,6 @@ class cell {
       nextState = 0;
       age = 0;
     }
-
   }
 
   void commit() {
